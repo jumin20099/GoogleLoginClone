@@ -140,20 +140,36 @@ a{
 
 .account > a{
     font-size: 14px;
+    padding: 8px 10px 8px 10px;
 }
 
 .account > a:hover{
     color: rgb(0, 87, 201);
+    background-color: rgb(245, 253, 255);
 }
 
 /* option 200 48
 footer 183 48 */
 footer{
     margin-left: 725px;
+    margin-top: 10px;
 }
 
 footer > a{
     color: rgb(60,64,67);
     font-size: 13px;
-    margin-left: 25px;
+    margin-left: 26px;
+}
+
+#language{
+    padding-left: 10px;
+    border: none;
+    width: 190px;
+    height: 48px;
+}
+
+#language:focus{
+    background-color: #eee;
+    border-radius: 5px;
+    outline: none;
 }
