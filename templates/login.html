@@ -15,7 +15,7 @@
         <h2>Google 계정 사용</h2>
         <br>
         <div class="forget">
-            <form method="GET" action="/templates/password.html">
+            <form id="emailForm" method="GET" action="/templates/password.html">
 
                 <input id="email"
                 placeholder=""
@@ -32,7 +32,7 @@
                 
             </form>
 
-            <!-- <div class="placeholder">이메일 또는 휴대전화</div> -->
+            <!-- <div id="placeholder">이메일 또는 휴대전화</div> -->
             <a href="#">이메일을 잊으셨나요?</a>
         </div>
         <div class="guest">
@@ -55,6 +55,6 @@
         <a target="_blank" href="https://accounts.google.com/TOS?loc=KR&hl=ko">약관</a>
     </footer>
     
-    <script src="/static/script.js"></script>
 </body>
+<script src="/static/login.js"></script>
 </html>
