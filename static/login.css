@@ -19,6 +19,10 @@ img {
     -o-user-drag: none;
 }
 
+h2{
+    margin-bottom: 10px;
+}
+
 #container{
     width: 366px;
     height: 414px;
@@ -62,52 +66,76 @@ a{
     font-size: 15px;
 }
 
+
 #email{
-    width: 321px;
-    height: 24px;
+    position: absolute;
+    width: 334px;
+    height: 22px;
     border: solid lightgray 1px;
     border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 8px;
     padding: 15px;
     font-size: 17px;
     background-color: white;
+    bottom: 0px;
+    z-index: 20;
 }
 
 #email:focus{
     outline: solid 2px rgb(26,115,232);
 }
 
-@keyframes movePlhTop{
-    to {top: 393px;}
-}
-/* 
-@keyframes movePlhLeft{
-    from {left: 100px;}
-    to {left: 200px;}
+.focusEmailInput{
+    outline: none !important;
 }
 
-@keyframes sizeUp{
-    to{ transform: scale(0.6);}
-} */
+.blurEmailInput{
+    z-index: 123123 !important;
+}
 
-#placeholder{
+#emailFieldset{
     position: absolute;
-    top: 430px;
-    left: 785px; 
-    font-size: 17px;
-    color: rgb(88, 88, 88);
+    top: 403px;
+    left: 778px;
+    width: 366px;
+    height: 53px;
+    border-radius: 5px;
+    border: none;
+}
+
+.focusFieldset{
+    outline: solid 2px rgb(26,115,232) !important;
+    z-index: 100 !important;
+}
+
+#emailLegend{
+    position: absolute;
     text-align: center;
-    width: 180px;
-    /* animation: movePlhTop 1s infinite; */
-    /* animation: sizeUp 1s infinite; */
-    z-index: 100;
+    font-size: 13px;
+    left: 785px;
+    top: 393px;
+    width: 140px;
     background-color: white;
-    height: 10px;
+    z-index: 11230;
+    color: rgb(26,115,232);
+}
+
+.focusLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 395px;
+    width: 140px;
+    background-color: white;
+    z-index: 12310;
 }
 
 .forget{
     margin-bottom: 40px;
+}
+
+.forget > div{
+    margin-top: 60px;
 }
 
 .guest{
@@ -172,3 +200,4 @@ footer > a{
     border-radius: 5px;
     outline: none;
 }
+
