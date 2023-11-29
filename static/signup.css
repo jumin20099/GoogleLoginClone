@@ -1,0 +1,332 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li{
+    list-style: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+#container{
+    width: 366px;
+    height: 414px;
+    border: solid lightgray 1px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 220px;
+    padding: 48px 40px 36px;
+}
+
+.logo{
+    width: 75px;
+    margin-bottom: 10px;
+    margin-left: 140px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-size: 15.5px;
+    color: rgb(32,33,36);
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    color: gray;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(26,115,232);
+    font-size: 15px;
+}
+
+
+/* ================================ */
+
+
+#makeEmail{
+    position: absolute;
+    width: 334px;
+    height: 22px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 17px;
+    background-color: white;
+    bottom: 0px;
+    z-index: 20;
+}
+
+#makeEmail:focus{
+    outline: solid 2px rgb(26,115,232);
+}
+
+.focusMakeEmailInput{
+    outline: none !important;
+}
+
+.blurMakeEmailInput{
+    z-index: 123123 !important;
+}
+
+#makeEmailFieldset{
+    position: absolute;
+    top: 403px;
+    left: 778px;
+    width: 366px;
+    height: 53px;
+    border-radius: 5px;
+    border: none;
+}
+
+#makeEmailFieldset > p{
+    position: absolute;
+    z-index: 1000;
+    left: 270px;
+    top: 14px;
+    color: rgb(99, 99, 99);
+    z-index: 123123123123;
+}
+
+.focusMakeEmailFieldset{
+    outline: solid 2px rgb(26,115,232) !important;
+    z-index: 100 !important;
+}
+
+
+#makeEmailLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 392px;
+    width: 85px;
+    background-color: white;
+    z-index: 100;
+    color: rgb(26,115,232);
+}
+
+.focusMakeEmailLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 395px;
+    width: 140px;
+    background-color: white;
+    z-index: 12310;
+}
+
+
+#makePw{
+    position: absolute;
+    width: 334px;
+    height: 22px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 17px;
+    background-color: white;
+    bottom: 0.5px;
+    z-index: 20;
+}
+
+#makePw:focus{
+    outline: solid 2px rgb(26,115,232);
+}
+
+.focusMakePwInput{
+    outline: none !important;
+}
+
+.blurMakePwInput{
+    z-index: 123123 !important;
+}
+
+#makePwFieldset{
+    position: absolute;
+    top: 473px;
+    left: 778px;
+    width: 366px;
+    height: 53px;
+    border-radius: 5px;
+    border: none;
+}
+
+.focusMakePwFieldset{
+    outline: solid 2px rgb(26,115,232) !important;
+    z-index: 100 !important;
+}
+
+#makePwLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 463px;
+    width: 70px;
+    background-color: white;
+    z-index: 11230;
+    color: rgb(26,115,232);
+}
+
+.focusMakePwLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 395px;
+    width: 140px;
+    background-color: white;
+    z-index: 12310;
+}
+
+#checkPw{
+    position: absolute;
+    width: 334px;
+    height: 22px;
+    border: solid lightgray 1px;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 17px;
+    background-color: white;
+    bottom: 0.5px;
+    z-index: 20;
+}
+
+#checkPw:focus{
+    outline: solid 2px rgb(26,115,232);
+}
+
+.focusCheckPwInput{
+    outline: none !important;
+}
+
+.blurCheckPwInput{
+    z-index: 12310 !important;
+}
+
+#checkPwFieldset{
+    position: absolute;
+    top: 547px;
+    left: 778px;
+    width: 366px;
+    height: 53px;
+    border-radius: 5px;
+    border: none;
+}
+
+.focusCheckPwFieldset{
+    outline: solid 2px rgb(26,115,232) !important;
+    z-index: 100 !important;
+}
+
+#checkPwLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 536px;
+    width: 40px;
+    background-color: white;
+    color: rgb(26,115,232);
+}
+
+.focusCheckPwLegend{
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    left: 785px;
+    top: 395px;
+    width: 140px;
+    background-color: white;
+    z-index: 12312312310;
+}
+
+/* ================================ */
+
+
+.forget{
+    margin-bottom: 40px;
+}
+
+#submit{
+    margin-left: 209px;
+    background-color: rgb(26,115,232);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 23px;
+    line-height: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 620px;
+    left: 860px;
+}
+
+#submit:hover{
+    background-color: rgb(6, 92, 204);
+}
+
+.checkbox{
+    position: absolute;
+    top: 615px;
+    display: flex;
+    margin-left: 5px;
+}
+
+.checkbox > p{
+    margin-left: 10px;
+}
+
+footer{
+    margin-left: 725px;
+    margin-top: 10px;
+}
+
+footer > a{
+    color: rgb(60,64,67);
+    font-size: 13px;
+    margin-left: 26px;
+}
+
+#language{
+    padding-left: 10px;
+    border: none;
+    width: 190px;
+    height: 48px;
+}
+
+#language:focus{
+    background-color: #eee;
+    border-radius: 5px;
+    outline: none;
+}
+
