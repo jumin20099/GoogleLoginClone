@@ -1,0 +1,26 @@
+<form onsubmit="signup()">
+    <input type="text" id="username">
+    <input type="password" id="password">
+    <input type="submit" value="입력">
+</form>
+
+<script>
+    function signup() {
+    let username = document.getElementById("username").value
+    let password = document.getElementById("password").value
+    console.log(`${username} ${password}`)
+    fetch("http://pcs.pah.kr:1127/signup", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        body: JSON.stringify({
+            "username": username,
+            "password": password
+        }),
+    })
+    .then((Response) => Response.json())
+    .then((result) => console.log("결과 : ", result));
+}
+</script>

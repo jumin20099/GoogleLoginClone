@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/static/Google Icon.png">
     <link rel="stylesheet" href="/static/login.css">
+
     <title>로그인 - Google 계정</title>
 </head>
 <body>
@@ -26,6 +27,7 @@
                     pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
                     autocomplete="off"
                     name="email"
+                    oninput="emailInput(this.value)"
                     oninvalid="this.setCustomValidity('올바른 이메일을 입력하세요.')"
                     required>
                 </fieldset>
