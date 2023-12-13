@@ -1,48 +1,98 @@
-function signup(userName, password) {
-    console.log(`${userName} ${password}`);
-    // fetch("http://pcs.pah.kr:1127/signup", {
-    //     method: "post",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //         "username": userName,
-    //         "password": password,
-    //     }),
-    // })
-    // .then((response) => response.json())
-    // .then((result) => console.log("결과: ", result))
-    // .catch((error) => console.error("에러 발생: ", error));
-    let http = new XMLHttpRequest();
-    let url = 'http://pcs.pah.kr:1127/signup';
-    http.open('POST', url);
+document.addEventListener('DOMContentLoaded', function () {
+    const emailForm = document.getElementById('emailForm');
+    const makeEmailInput = document.getElementById('makeEmail');
+    const makePwInput = document.getElementById('makePw');
+    const checkPwInput = document.getElementById('checkPw');
 
-    //Send the proper header information along with the request
-    http.setRequestHeader('Content-type', 'application/json');
+    makeEmailInput.addEventListener('click', moveMakeEmailPlh);
+    makePwInput.addEventListener('click', moveMakePwPlh);
+    checkPwInput.addEventListener('click', moveCheckPwPlh);
 
-    http.onreadystatechange = function () { //Call a function when the state changes.
-        if (http.readyState == 4 && http.status == 200) { 
-            alert(http.responseText);
-        }
+});
+
+async function funSignup(event) {
+    event.preventDefault();
+    const makeEmailInput = document.getElementById('makeEmail');
+    const makePwInput = document.getElementById('makePw');
+    const checkPwInput = document.getElementById('checkPw');
+
+    const username = makeEmailInput.value;
+    const password = makePwInput.value;
+    const confirmPassword = checkPwInput.value;
+    if (password !== confirmPassword) {
+        alert("비밀번호가 일치하지 않습니다. 다시 확인해주세요.");
+        return;
     }
-    http.send(JSON.stringify({
-        "username": userName,
-        "password": password,
-    })
-    )
-}
+    const data = {
+        "username": username,
+        "password": password
+    };
 
-function emailInput(email) {
-    localStorage.setItem("email", email)
-}
+    await POSTRequest('http://pcs.pah.kr:1127/signup', JSON.stringify(data))
+    // await fetch('/signup', {
+    //     method: 'POST',
+    //     headers: {
+    //         "Content-Type": "application/json"
+    //     },
+    //     body: JSON.stringify(data)
+    // })
+    //     .then(response => response.json())
+    //     .then(result => {
+    //         console.log(result);
+    //     })
+    //     .catch(error => {
+    //         console.error('에러남 좃댐:', error);
+    //     });
 
-function passwordInput() {
-    let password = document.getElementById("password").value
-    console.log(password)
-    signup(localStorage.getItem("email"), password)
-}
+    makePwInput.type = "password";
+    checkPwInput.type = "password";
+};
 
-// checkbox.addEventListener("click", function () {
+// function signup(userName, password) {
+//     console.log(`${userName} ${password}`);
+//     // fetch("http://pcs.pah.kr:1127/signup", {
+//     //     method: "post",
+//     //     headers: {
+//     //         "Content-Type": "application/json",
+//     //     },
+//     //     body: JSON.stringify({
+//     //         "username": userName,
+//     //         "password": password,
+//     //     }),
+//     // })
+//     // .then((response) => response.json())
+//     // .then((result) => console.log("결과: ", result))
+//     // .catch((error) => console.error("에러 발생: ", error));
+//     let http = new XMLHttpRequest();
+//     let url = 'http://pcs.pah.kr:1127/signup';
+//     http.open('POST', url);
+
+//     //Send the proper header information along with the request
+//     http.setRequestHeader('Content-type', 'application/json');
+
+//     http.onreadystatechange = function () { //Call a function when the state changes.
+//         if (http.readyState == 4 && http.status == 200) {
+//             alert(http.responseText);
+//         }
+//     }
+//     http.send(JSON.stringify({
+//         "username": userName,
+//         "password": password,
+//     })
+//     )
+// }
+
+// function emailInput(email) {
+//     localStorage.setItem("email", email)
+// }
+
+// function passwordInput() {
+//     let password = document.getElementById("password").value
+//     console.log(password)
+//     signup(localStorage.getItem("email"), password)
+// }
+
+// checkbox.addEventListener("click", function () { //비밀번호 보이게하기
 
 //     let pwInput = document.querySelector(".password");
 //     let checkBox = document.querySelector("#checkbox");
@@ -55,7 +105,7 @@ function passwordInput() {
 //     }
 // });
 
-// checkbox.addEventListener("click", function () {
+// checkbox.addEventListener("click", function () { //비밀번호 보이게하기
 
 //     let pwInput = document.querySelector(".password2");
 //     let checkBox = document.querySelector("#checkbox");

@@ -19,16 +19,16 @@
         <div class="forget">
             <form id="emailForm" method="GET" action="/templates/password.html">
 
+                <!-- pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" -->
                 <fieldset id="emailFieldset">
                     <input onclick="moveEmailPlh()"
                     id="email"
                     placeholder="이메일 또는 휴대전화"
-                    type="email"
-                    pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
+                    type="text"
                     autocomplete="off"
                     name="email"
                     oninput="emailInput(this.value)"
-                    oninvalid="this.setCustomValidity('올바른 이메일을 입력하세요.')"
+                    oninvalid="this.setCustomValidity('사용자 이름을 입력하세요.')"
                     required>
                 </fieldset>
                 <legend id="emailLegend"></legend>

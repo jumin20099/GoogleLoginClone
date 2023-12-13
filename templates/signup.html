@@ -16,17 +16,17 @@
         <h2>생성할 계정 정보를 입력하세요.</h2>
         <br>
         <div class="forget">
-            <form id="emailForm" method="GET" action="/templates/password.html">
+            <form id="emailForm" method="POST" onsubmit="funSignup(event);">
+
+                <!-- pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" -->
 
                 <fieldset id="makeEmailFieldset">
                     <input onclick="moveMakeEmailPlh()"
                     id="makeEmail"
                     placeholder="사용자 이름"
-                    type="email"
-                    pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*"
+                    type="text"
                     autocomplete="off"
                     name="email"
-                    oninvalid="this.setCustomValidity('Gmail 주소를 입력하세요.')"
                     required>
 
                     <p>@gmail.com</p>
@@ -42,7 +42,6 @@
                     title="6자 이상 비번만 가능"
                     autocomplete="off"
                     name="password"
-                    oninvalid="this.setCustomValidity('올바른 비밀번호를 입력하세요.')"
                     required>
                 </fieldset>
 
@@ -55,8 +54,6 @@
                     pattern=".{6,}"
                     autocomplete="off"
                     name="password"
-                    oninvalid="this.setCustomValidity('비밀번호 확인')"
-                    on
                     required>
                 </fieldset>
 
@@ -90,5 +87,6 @@
     </footer>
     
 </body>
-<script src="/static/script.js"></script>
+<script src="../static/REST.js"></script>
+<script src="../static/script.js"></script>
 </html>
